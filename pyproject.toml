@@ -1,0 +1,20 @@
+[project]
+name = "techresolve"
+version = "1.1.0"
+description = "Deterministic technology entity disambiguation for threat-intel reports"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+techresolve = "techresolve.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Ship the bundled KB with the package (loaded via importlib.resources).
+[tool.setuptools.package-data]
+techresolve = ["data/*.json"]

@@ -1,0 +1,182 @@
+input,expected_status,expected_ids,category,split,note
+AWS,MATCH,aws,exact,dev,
+CrowdStrike Falcon,MATCH,crowdstrike/falcon,exact,dev,
+Microsoft Sentinel,MATCH,microsoft/sentinel,exact,test,
+Splunk Enterprise,MATCH,splunk/enterprise,exact,dev,
+IBM QRadar,MATCH,ibm/qradar,exact,dev,
+Kubernetes,MATCH,kubernetes/kubernetes,exact,test,
+Node.js,MATCH,nodejs/nodejs,exact,dev,
+C++,NOT_FOUND,,out-of-scope,dev,language: not a product
+C#,NOT_FOUND,,out-of-scope,test,language: not a product
+Apache Log4j,MATCH,apache/log4j,exact,dev,
+Okta Workforce Identity,MATCH,okta/workforce-identity,exact,dev,
+VMware ESXi,MATCH,vmware/esxi,exact,test,
+Amazon Web Services,MATCH,aws,alias,dev,
+AWS Cloud,MATCH,aws,alias,dev,
+amazon web services,MATCH,aws,alias,test,casing
+AMAZON-WEB-SERVICES,MATCH,aws,alias,dev,punctuation
+Amazon EKS,MATCH,aws/eks,alias,dev,
+Elastic Kubernetes Service,MATCH,aws/eks,alias,test,
+Azure Sentinel,MATCH,microsoft/sentinel,alias,dev,former product name
+SentinelOne,MATCH,sentinelone/singularity,alias,dev,
+Sentinel One,MATCH,sentinelone/singularity,alias,test,
+Sentinel-One,MATCH,sentinelone/singularity,alias,dev,punctuation
+CrowdStrike Falcon®,MATCH,crowdstrike/falcon,alias,dev,trademark symbol
+Falcon Insight,MATCH,crowdstrike/falcon,alias,test,
+Azure AD,MATCH,microsoft/entra-id,alias,dev,renamed product
+Azure Active Directory,MATCH,microsoft/entra-id,alias,dev,
+Office 365,MATCH,microsoft/365,alias,test,
+O365,MATCH,microsoft/365,alias,dev,
+GCP,MATCH,google/cloud,alias,dev,
+Google Cloud Platform,MATCH,google/cloud,alias,test,
+K8s,MATCH,kubernetes/kubernetes,alias,dev,
+NodeJS,MATCH,nodejs/nodejs,alias,dev,
+node-js,MATCH,nodejs/nodejs,alias,test,punctuation
+Log4j2,MATCH,apache/log4j,alias,dev,
+log4j-core,MATCH,apache/log4j,alias,dev,
+Pulse Secure,MATCH,ivanti/connect-secure,alias,test,renamed product
+Citrix ADC,MATCH,citrix/netscaler-adc,alias,dev,
+Windows Defender ATP,MATCH,microsoft/defender-for-endpoint,alias,dev,
+Chronicle SIEM,MATCH,google/secops,alias,test,
+G Suite,MATCH,google/workspace,alias,dev,
+Okta,MATCH,okta/workforce-identity,alias,dev,
+Okta Inc.,MATCH,okta/workforce-identity,alias,test,legal suffix
+"ServiceNow, Inc.",MATCH,servicenow/platform,alias,dev,legal suffix
+Snowflake Inc,MATCH,snowflake/snowflake,alias,dev,legal suffix
+"Salesforce.com, Inc.",MATCH,salesforce/platform,alias,test,legal suffix
+MOVEit,MATCH,progress/moveit-transfer,alias,dev,
+PAN-OS,MATCH,paloaltonetworks/pan-os,alias,dev,
+Cortex XDR,MATCH,paloaltonetworks/cortex-xdr,alias,test,
+Carbon Black,MATCH,vmware/carbon-black,alias,dev,
+MS Teams,MATCH,microsoft/teams,alias,dev,
+Crowdstrik Falcon,MATCH,crowdstrike/falcon,typo,dev,
+CrowdStrike Falcn,MATCH,crowdstrike/falcon,typo,test,
+Crowdstrike Falkon,MATCH,crowdstrike/falcon,typo,dev,
+Microsft Sentinel,MATCH,microsoft/sentinel,typo,dev,
+Microsoft Sentinal,MATCH,microsoft/sentinel,typo,test,
+Kuberentes,MATCH,kubernetes/kubernetes,typo,dev,
+Kubernets,MATCH,kubernetes/kubernetes,typo,dev,
+Splunk Enterprize,MATCH,splunk/enterprise,typo,test,
+Elastisearch,MATCH,elastic/elasticsearch,typo,dev,
+SentinelOne Singularty,MATCH,sentinelone/singularity,typo,dev,
+Confluance,MATCH,atlassian/confluence,typo,test,
+Okta Workforce Identiy,MATCH,okta/workforce-identity,typo,dev,
+Google Kuberntes Engine,MATCH,google/gke,typo,dev,
+Amazon Elastic Kubernetes Servce,MATCH,aws/eks,typo,test,
+FortiGat,MATCH,fortinet/fortios,typo,dev,appliance name is an OS alias
+Microsoft Defender for Endpont,MATCH,microsoft/defender-for-endpoint,typo,dev,
+Carbon Blak,MATCH,vmware/carbon-black,typo,test,
+Ivanti Conect Secure,MATCH,ivanti/connect-secure,typo,dev,
+Palo Alto Networks Cortex XRD,MATCH,paloaltonetworks/cortex-xdr,typo,dev,transposed short token
+Atlassian Jria,MATCH,atlassian/jira,typo,test,
+Sentinel,AMBIGUOUS,microsoft/sentinel;sentinelone/singularity,near-collision,dev,shared alias
+sentinel,AMBIGUOUS,microsoft/sentinel;sentinelone/singularity,near-collision,test,shared alias
+Sentinel SIEM,MATCH,microsoft/sentinel,near-collision,dev,
+SentinelOne EDR,MATCH,sentinelone/singularity,near-collision,dev,
+Microsoft Azure Sentinel,MATCH,microsoft/sentinel,near-collision,test,
+Defender,AMBIGUOUS,microsoft/defender-for-endpoint;microsoft/defender-antivirus,near-collision,dev,shared alias
+Windows Defender,MATCH,microsoft/defender-antivirus,near-collision,dev,
+Defender for Endpoint,MATCH,microsoft/defender-for-endpoint,near-collision,test,
+Splunk,AMBIGUOUS,splunk/enterprise;splunk/cloud,near-collision,dev,shared alias
+Splunk Cloud,MATCH,splunk/cloud,near-collision,dev,
+Exchange,AMBIGUOUS,microsoft/exchange-server;microsoft/exchange-online,near-collision,test,shared alias
+Exchange Online,MATCH,microsoft/exchange-online,near-collision,dev,
+Sentinl,AMBIGUOUS,microsoft/sentinel;sentinelone/singularity,near-collision,dev,typo of shared alias
+Spring Boot,MATCH,spring/boot,near-collision,test,
+Spring,MATCH,spring/framework,near-collision,dev,
+AWS EKS,MATCH,aws/eks,hard-negative,dev,must not resolve to aws
+AWS ECS,MATCH,aws/ecs,hard-negative,test,must not resolve to aws/eks
+AWS EC2,MATCH,aws/ec2,hard-negative,dev,must not resolve to aws/ecs
+Amazon ECR,NOT_FOUND,,hard-negative,dev,not in KB; close to ECS/EKS
+Java,NOT_FOUND,,out-of-scope,test,language: not a product
+JavaScript,NOT_FOUND,,out-of-scope,dev,language: not a product
+C,NOT_FOUND,,hard-negative,dev,must not resolve to C++ or C#
+Azure,MATCH,microsoft/azure,hard-negative,test,must not resolve to entra-id
+Azure Kubernetes Service,MATCH,microsoft/aks,hard-negative,dev,must not resolve to aws/eks or gke
+Google Kubernetes Engine,MATCH,google/gke,hard-negative,dev,
+Google Cloud,MATCH,google/cloud,hard-negative,test,must not collapse to google
+Active Directory,MATCH,microsoft/active-directory,hard-negative,dev,must not resolve to entra-id
+CrowdStrike,NOT_FOUND,,hard-negative,dev,vendor only
+Microsoft,NOT_FOUND,,hard-negative,test,vendor only
+Amazon,NOT_FOUND,,hard-negative,dev,vendor only
+Fortinet FortiWeb,NOT_FOUND,,hard-negative,dev,different Fortinet product not in KB
+FortiOS,MATCH,fortinet/fortios,exact,test,
+Spring Cloud,NOT_FOUND,,hard-negative,dev,different Spring project not in KB
+FooBarDB,NOT_FOUND,,unknown,dev,
+Acme Widget Pro,NOT_FOUND,,unknown,test,
+Wireshark,NOT_FOUND,,unknown,dev,
+Zscaler Internet Access,NOT_FOUND,,unknown,dev,
+Cisco ASA,NOT_FOUND,,unknown,test,
+Notepad++,NOT_FOUND,,unknown,dev,
+Cloudflare,NOT_FOUND,,unknown,dev,
+SolarWinds Orion,NOT_FOUND,,unknown,test,
+,NOT_FOUND,,unknown,dev,empty input
+™®,NOT_FOUND,,unknown,dev,symbols only
+Apache Log4j 2.14.1,MATCH,apache/log4j,versioned,dev,known limitation: versions not stripped
+Exchange Server 2019,MATCH,microsoft/exchange-server,versioned,test,known limitation
+OpenSSL 3.0.7,MATCH,openssl/openssl,versioned,dev,known limitation
+Spring Framework 5.3.17,MATCH,spring/framework,versioned,dev,known limitation
+PAN-OS 10.2,MATCH,paloaltonetworks/pan-os,versioned,test,known limitation
+Python 3,NOT_FOUND,,out-of-scope,dev,language: not a product
+CrowdStrike Falcon EDR agent,MATCH,crowdstrike/falcon,unseen-variant,dev,extra descriptive words
+Microsoft Defender for Endpoint EDR,MATCH,microsoft/defender-for-endpoint,unseen-variant,dev,
+AWS Lambda functions,MATCH,aws/lambda,unseen-variant,dev,
+Google Cloud Platform GCP,MATCH,google/cloud,unseen-variant,dev,
+Okta identity provider,MATCH,okta/workforce-identity,unseen-variant,dev,
+Trend Micro Vision One XDR,MATCH,trendmicro/vision-one,unseen-variant,dev,
+Sophos Intercept X endpoint,MATCH,sophos/intercept-x,unseen-variant,dev,
+Falcon CrowdStrike,MATCH,crowdstrike/falcon,unseen-variant,dev,word order
+CrowdStrike Falcon Sensor,MATCH,crowdstrike/falcon,unseen-variant,test,extra descriptive word
+Microsoft Sentinel SIEM,MATCH,microsoft/sentinel,unseen-variant,test,
+SentinelOne Singularity XDR,MATCH,sentinelone/singularity,unseen-variant,test,
+Amazon EKS cluster,MATCH,aws/eks,unseen-variant,test,
+AWS S3 buckets,MATCH,aws/s3,unseen-variant,test,
+Apache Struts2 framework,MATCH,apache/struts,unseen-variant,test,
+Atlassian Confluence Server,MATCH,atlassian/confluence,unseen-variant,test,
+Ivanti Pulse Secure VPN,MATCH,ivanti/connect-secure,unseen-variant,test,
+VMware ESXi hypervisor,MATCH,vmware/esxi,unseen-variant,test,
+Fortinet FortiGate firewalls,MATCH,fortinet/fortios,unseen-variant,test,appliance name is an OS alias
+Google Kubernetes Engine (GKE),MATCH,google/gke,unseen-variant,test,
+Progress MOVEit,MATCH,progress/moveit-transfer,unseen-variant,test,
+Elastic Search cluster,MATCH,elastic/elasticsearch,unseen-variant,test,
+Kubernetes cluster,MATCH,kubernetes/kubernetes,unseen-variant,test,
+MS Exchange Online,MATCH,microsoft/exchange-online,unseen-variant,test,
+Splunk Enterprise SIEM,MATCH,splunk/enterprise,unseen-variant,test,
+IBM QRadar SIEM platform,MATCH,ibm/qradar,unseen-variant,test,
+Okta SSO login,MATCH,okta/workforce-identity,unseen-variant,test,
+Crowdstirke Falcon,MATCH,crowdstrike/falcon,typo,test,transposition
+Splunk Enterprse,MATCH,splunk/enterprise,typo,test,
+SentinalOne,MATCH,sentinelone/singularity,typo,test,
+Elasticsaerch,MATCH,elastic/elasticsearch,typo,test,
+Confluense,MATCH,atlassian/confluence,typo,test,
+QRadr,MATCH,ibm/qradar,typo,test,
+Fortigte,MATCH,fortinet/fortios,typo,test,appliance name is an OS alias
+Sentinal,AMBIGUOUS,microsoft/sentinel;sentinelone/singularity,fuzzy-ambiguous,dev,typo of shared alias
+Defnder,AMBIGUOUS,microsoft/defender-for-endpoint;microsoft/defender-antivirus,fuzzy-ambiguous,dev,typo of shared alias
+Spluk,AMBIGUOUS,splunk/enterprise;splunk/cloud,fuzzy-ambiguous,dev,typo of shared alias
+Exchnge,AMBIGUOUS,microsoft/exchange-server;microsoft/exchange-online,fuzzy-ambiguous,dev,typo of shared alias
+Defendr,AMBIGUOUS,microsoft/defender-for-endpoint;microsoft/defender-antivirus,fuzzy-ambiguous,test,typo of shared alias
+Splnk,AMBIGUOUS,splunk/enterprise;splunk/cloud,fuzzy-ambiguous,test,typo of shared alias
+Exchang,AMBIGUOUS,microsoft/exchange-server;microsoft/exchange-online,fuzzy-ambiguous,test,typo of shared alias
+Sentinell,AMBIGUOUS,microsoft/sentinel;sentinelone/singularity,fuzzy-ambiguous,test,typo of shared alias
+Defender for Cloud,NOT_FOUND,,hard-negative,dev,different Defender product not in KB
+Docker Desktop,NOT_FOUND,,hard-negative,dev,different Docker product not in KB
+Falcon framework,NOT_FOUND,,hard-negative,dev,generic alias: Falcon Python framework
+Falcon web framework,NOT_FOUND,,hard-negative,test,generic alias: Falcon Python framework
+Node Exporter,NOT_FOUND,,hard-negative,test,generic alias: Prometheus Node Exporter
+Spring Cloud Gateway,NOT_FOUND,,hard-negative,test,different Spring project not in KB
+AWS EKS Anywhere,NOT_FOUND,,hard-negative,test,different product (on-prem EKS) not in KB
+Microsoft Defender for Cloud,NOT_FOUND,,hard-negative,test,different Defender product not in KB
+Splunk SOAR,NOT_FOUND,,hard-negative,test,different Splunk product not in KB
+Cortex XSOAR,NOT_FOUND,,hard-negative,test,different Palo Alto product not in KB
+Azure DevOps,NOT_FOUND,,unknown,test,
+Oracle Database,NOT_FOUND,,unknown,test,
+Amazon Linux,NOT_FOUND,,unknown,test,
+Microsoft AKS,MATCH,microsoft/aks,alias,dev,former canonical name
+Oracle Java,NOT_FOUND,,out-of-scope,dev,language: not a product
+Elastic Elasticsearch,MATCH,elastic/elasticsearch,alias,test,former canonical name
+Microsoft Defender for Identity,NOT_FOUND,,hard-negative,dev,different Defender product not in KB
+Microsoft Defender for Office 365,NOT_FOUND,,hard-negative,dev,different Defender product not in KB; close to microsoft/365
+Defender for Cloud Apps,NOT_FOUND,,hard-negative,dev,different Defender product not in KB
+Microsoft Defender XDR,NOT_FOUND,,hard-negative,dev,different Defender product not in KB
+Microsoft 365 Defender,NOT_FOUND,,hard-negative,dev,former name of Defender XDR; not in KB; close to microsoft/365
